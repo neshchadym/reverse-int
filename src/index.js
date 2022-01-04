@@ -1,3 +1,7 @@
 module.exports = function reverse(n) {
-   return (n > 0 ? 1 : -1) * Math.abs(n).toString().split('').reverse().join('')
+   let isNegative = n < 0;  
+  let reverseAsString = Math.abs(n).toString().split('').reverse().join('');
+  let result = Number(reverseAsString);
+  
+  return isNegative ? -result : result;
 }
